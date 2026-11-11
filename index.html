@@ -67,8 +67,7 @@ function render(){
  let items=g.items.map(i=>{const x=saved.find(z=>z.name.toLowerCase()===i[0].toLowerCase());return x?[x.name,x.desc||"",x.price,x.tag||"Menu",x.available!==false]:[i[0],i[1],i[2],i[3],true]}).filter(i=>i[4]&&(i[0]+" "+i[1]+" "+i[3]).toLowerCase().includes(q));
  if(items.length)out+='<section class="section"><div class="sectionhead"><h2>'+g.name+'</h2><span class="count">'+String(items.length).padStart(2,"0")+' ITEMS</span></div><div class="sub" style="font-size:10px;margin:5px 0 8px">'+g.desc+'</div>'+items.map(i=>'<article class="item"><div class="itemmain"><div class="itemtop"><h3>'+i[0]+'</h3><span class="tag">'+i[3]+'</span></div><p>'+i[1]+'</p></div><div class="price">'+money(i[2])+'</div></article>').join("")+'</section>';
  });
- const extras=saved.filter(x=>!groups.some(g=>g.items.some(i=>i[0].toLowerCase()===x.name.toLowerCase()))&&x.available!==false&&(x.name+" "+x.desc+" "+x.tag).toLowerCase().includes(q));
- if(extras.length&&(active==="All"||extras.some(x=>x.category===active)))out+='<section class="section"><div class="sectionhead"><h2>New on the Menu</h2></div>'+extras.map(x=>'<article class="item"><div class="itemmain"><div class="itemtop"><h3>'+x.name+'</h3><span class="tag">'+(x.tag||"Menu")+'</span></div><p>'+x.desc+'</p></div><div class="price">'+money(x.price)+'</div></article>').join("")+'</section>';
+ 
  menu.innerHTML=out||'<p class="sub" style="padding:25px 0">No dishes found. Try another search.</p>';
 }
 render();
