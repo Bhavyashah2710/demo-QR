@@ -16,7 +16,8 @@ const $=id=>document.getElementById(id);
 let data;try{data=JSON.parse(localStorage.getItem("shahCafeMenu")||"null")}catch(e){data=null}
 if(!Array.isArray(data))data=seed.map(x=>({...x}));
 function persist(){localStorage.setItem("shahCafeMenu",JSON.stringify(data));renderList();$("status").textContent="Saved successfully. Customer menu uses this browser's saved data."}
-function signin(){const pin=$("pin").value.trim();if(pin==="1234"){$("login").style.display="none";$("panel").classList.remove("hidden");renderList();$("err").textContent=""}else $("err").textContent="Incorrect PIN. Enter 1234."}\n$("loginBtn").addEventListener("click",signin);$("pin").addEventListener("keydown",e=>{if(e.key==="Enter")signin()});
+function signin(){const pin=$("pin").value.trim();if(pin==="1234"){$("login").style.display="none";$("panel").classList.remove("hidden");renderList();$("err").textContent=""}else $("err").textContent="Incorrect PIN. Enter 1234."}
+$("loginBtn").addEventListener("click",signin);$("pin").addEventListener("keydown",e=>{if(e.key==="Enter")signin()});
 function clearForm(){$("form").reset();$("editId").value="";$("submitBtn").textContent="Add menu item"}
 $("form").addEventListener("submit",function(e){e.preventDefault();const id=$("editId").value;const name=$("name").value.trim();const price=Number($("price").value);const category=$("category").value.trim();if(!name||!category||!Number.isFinite(price)||price<0){alert("Please enter item name, valid price and category.");return}
 const old=id?data.find(x=>String(x.id)===id):null;
