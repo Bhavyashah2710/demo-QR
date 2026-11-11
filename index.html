@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#10100e"><title>Shah Café — Digital Menu</title>
+<meta name="theme-color" content="#17130f"><title>Shah Café | Menu & Coffee</title><meta name="description" content="Explore the Shah Café menu — thoughtfully made, beautifully served.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f4f0e8;--ink:#191914;--muted:#817d72;--line:#ded8cc;--accent:#a4472c;--serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif}
@@ -20,14 +20,30 @@ h1{font:clamp(42px,10vw,76px)/.98 var(--serif);letter-spacing:-2.8px;margin:16px
 .note{margin:26px 0;padding:18px;background:#eae3d7;font-size:11px;line-height:1.7;color:#6b6256}.note strong{color:var(--ink)}
 footer{border-top:1px solid var(--line);margin-top:32px;padding:24px 0 8px;display:flex;justify-content:space-between;align-items:center;gap:15px}.footbrand{font:20px var(--serif)}.footlinks{display:flex;gap:16px}.footlinks a{font-size:10px;text-decoration:none;color:var(--ink);letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid #b8aa96;padding-bottom:4px}.footlinks a.disabled{color:#aaa398;border:0;cursor:default}.copyright{font-size:9px;color:#aaa195;letter-spacing:1px;margin-top:16px}
 @media(min-width:650px){.shell{padding:0 42px 48px}.hero{padding-top:65px}.topline{padding:25px 0}.item{padding:20px 0}}
+
+/* SHAH CAFÉ — refined visual system */
+:root{--bg:#f8f5ef;--ink:#201a15;--muted:#8c8176;--line:#e3d9cc;--accent:#a64d31}
+body{background:var(--bg);background-image:radial-gradient(ellipse at 85% 0%,rgba(164,71,44,.055),transparent 34%);letter-spacing:.01em}
+.shell{max-width:820px;padding-left:clamp(22px,5vw,52px);padding-right:clamp(22px,5vw,52px)}
+.topline{border-bottom-color:#cfc2b1;padding:25px 0;letter-spacing:2.4px}.mark{font-size:12px;letter-spacing:3px}.logo{width:39px;height:39px;border:1px solid #a64d31;border-radius:2px;font-size:22px;transform:rotate(-3deg)}.topright{font-size:9px;color:#9a8b7b;letter-spacing:2.5px}
+.hero{padding:72px 0 40px}.eyebrow{display:flex;align-items:center;gap:12px;font-size:9px;letter-spacing:3.2px}.eyebrowline{height:1px;width:30px;background:var(--accent)}
+h1{font-size:clamp(58px,12vw,100px);line-height:.91;letter-spacing:-4.5px;margin:25px 0 22px;font-weight:500}h1 em{font-style:italic;font-weight:500;color:var(--accent)}
+.sub{font-size:13px;line-height:1.85;max-width:390px}.hero-meta{margin-top:28px;gap:25px;font-size:9px;letter-spacing:1.7px;color:#6e6256}
+.map-cta{margin-top:35px;display:flex;align-items:center;gap:14px;width:min(100%,355px);padding:15px 17px;border:1px solid #cfc0ad;background:#f1e9df;color:var(--ink);text-decoration:none;transition:all .22s ease}.map-cta:hover{background:#211a15;color:#f8f5ef;border-color:#211a15;transform:translateY(-2px)}.mapicon{width:32px;height:32px;display:grid;place-items:center;border:1px solid #b99d84;border-radius:50%;font-size:16px}.map-cta b{display:block;font-size:9px;letter-spacing:1.8px}.map-cta small{display:block;font-size:10px;color:#89786a;margin-top:4px}.map-cta:hover small{color:#c9b6a5}.maparrow{margin-left:auto;font-size:17px}
+.searchrow{margin:18px 0 20px}.search{background:#fcfaf6;border:1px solid #d8cbbc;border-radius:0;padding:15px 17px;font-size:12px}.filter{border-radius:0;border-color:#cfc0ad;letter-spacing:1.5px}.chip{border-radius:2px;padding:10px 15px;letter-spacing:1px}.chip.active{background:var(--accent);border-color:var(--accent)}
+.section{padding:28px 0 8px;border-top-color:#d9cbbb}.section h2{font-size:32px;letter-spacing:-1px}.count{letter-spacing:2px}.item{padding:21px 0;border-bottom-color:#e6ddd2;transition:padding .2s}.item:hover{padding-left:6px;padding-right:6px}.item h3{font-size:14px;letter-spacing:.1px}.item p{font-size:11px;color:#8d8175}.tag{border-color:#d5b9a5;color:#a64d31;letter-spacing:1.2px}.price{font-size:14px;color:#a64d31;font-variant-numeric:tabular-nums}
+.note{display:flex;align-items:center;gap:16px;margin:35px 0;padding:22px;background:#eee5da;border-left:2px solid var(--accent)}.note-mark{font:32px var(--serif);color:var(--accent);padding-right:14px;border-right:1px solid #d4c1ae}
+footer{margin-top:45px;padding:30px 0 10px;border-color:#d3c5b5}.footbrand{font:17px var(--sans);font-weight:700;letter-spacing:3px}.copyright{letter-spacing:1.5px}
+@media(min-width:650px){.hero{padding-top:90px}.item{padding:23px 0}.section{padding-top:32px}}
+@media(max-width:420px){h1{letter-spacing:-3px}.hero{padding-top:54px}.hero-meta{gap:13px;font-size:8px}.map-cta{width:100%}.section h2{font-size:28px}}
 </style></head>
 <body><main class="shell">
-<header class="topline"><div class="mark"><span class="logo">SC</span><span>Shah Café</span></div><span>Menu · 01</span></header>
-<section class="hero"><div class="eyebrow">A little taste of something special</div><h1>Good food.<br><em>Good mood.</em></h1><p class="sub">Thoughtfully made, beautifully served. Take your time and find your favourite.</p><div class="hero-meta"><span><i class="dot"></i> Freshly prepared</span><span>✳ All-day menu</span></div></section>
+<header class="topline"><div class="mark"><span class="logo">S<span style="color:var(--accent)">.</span></span><span>SHAH <small style="font-weight:400;letter-spacing:3px">CAFÉ</small></span></div><span class="topright">MENU / 2026</span></header>
+<section class="hero"><div class="eyebrow"><span class="eyebrowline"></span> THE SHAH CAFÉ EXPERIENCE</div><h1>Made for<br><em>your moment.</em></h1><p class="sub">Coffee, comfort & conversations. Discover the menu, find your favourite, and make yourself at home.</p><div class="hero-meta"><span><i class="dot"></i> Freshly prepared</span><span>✳ Thoughtfully served</span></div><a class="map-cta" href="https://www.google.com/maps/search/?api=1&query=Shah+Cafe+Vadodara" target="_blank" rel="noreferrer"><span class="mapicon">↗</span><span><b>FIND US ON MAP</b><small>Get directions to Shah Café</small></span><span class="maparrow">↗</span></a></section>
 <div class="searchrow"><input class="search" id="search" placeholder="Find your craving…" aria-label="Search menu"><button class="filter" onclick="document.getElementById('search').value='';render();">Reset ↗</button></div>
 <nav class="categories" id="cats"></nav><div id="menu"></div>
-<div class="note"><strong>A note from Shah Café</strong><br>Everything is prepared fresh. Please let our team know about allergies or dietary preferences before ordering.</div>
-<footer><div><div class="footbrand">Made with care<span style="color:var(--accent)">.</span></div><div class="copyright">© 2026 · A MENU THAT FEELS LIKE US</div></div><div class="footlinks"><a href="https://www.instagram.com/shaah.studio/" target="_blank" rel="noreferrer">Instagram ↗</a><a class="disabled" aria-disabled="true">WhatsApp · Coming soon</a></div></footer>
+<div class="note"><span class="note-mark">S.</span><div><strong>A note from Shah Café</strong><br>Everything is prepared fresh. Please let our team know about allergies or dietary preferences before ordering.</div></div>
+<footer><div><div class="footbrand">SHAH <span style="color:var(--accent)">CAFÉ</span></div><div class="copyright">© 2026 · A MENU THAT FEELS LIKE US</div></div><div class="footlinks"><a href="https://www.instagram.com/shaah.studio/" target="_blank" rel="noreferrer">Instagram ↗</a><a class="disabled" aria-disabled="true">WhatsApp · Coming soon</a></div></footer>
 </main>
 <script>
 const groups=[
